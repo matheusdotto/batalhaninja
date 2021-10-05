@@ -70,8 +70,8 @@ public class BatalhaTest {
 
     @Test
     public void deveRetornarPrimeiroNinjaComoVencedorQuandoEmpatar(){
-        Jutsu genjutsu = new Jutsu(5, 10);
-        Ninja naruto = new Ninja("Naruto",genjutsu);
+        Jutsu rasengan = new Jutsu(5, 10);
+        Ninja naruto = new Ninja("Naruto",rasengan);
 
         Jutsu caixaoDeAreia = new Jutsu(5, 10);
         Ninja gaara = new Ninja("gaara", caixaoDeAreia);

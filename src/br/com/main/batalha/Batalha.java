@@ -10,15 +10,17 @@ public class Batalha {
 
     public Ninja lutar(Ninja ninjaUm, Ninja ninjaDois) {
 
+        final String ninjaVencedor = "O Ninja vencedor é : ";
+
         while (ninjaUm.getChakra() > 0 || ninjaDois.getChakra() > 0) {
 
             if (ninjaUm.getNome().equals("Itachi")) {
                 vencedor = ninjaUm;
-                out.println("O ninja vencedor é: " + vencedor.getNome());
+                out.println(ninjaVencedor + vencedor.getNome());
                 return vencedor;
             } else if (ninjaDois.getNome().equals("Itachi")) {
                 vencedor = ninjaDois;
-                out.println("O ninja vencedor é: " + vencedor.getNome());
+                out.println(ninjaVencedor + vencedor.getNome());
                 return vencedor;
             } else {
 
@@ -27,16 +29,16 @@ public class Batalha {
 
                 ninjaUm.atacar(ninjaDois);
 
-                out.println("Ninja Atacante: " + ninjaDois.getNome() + '\n' +
+                out.println(ninjaVencedor + ninjaDois.getNome() + '\n' +
                         "Chakra: " + ninjaDois.getChakra());
                 ninjaDois.atacar(ninjaUm);
 
                 if (ninjaDois.getChakra() <= 0) {
                     vencedor = ninjaUm;
-                    out.println("O ninja vencedor é: " + vencedor.getNome());
+                    out.println(ninjaVencedor + vencedor.getNome());
                 } else if (ninjaUm.getChakra() <= 0) {
                     vencedor = ninjaDois;
-                    out.println("O ninja vencedor é: " + vencedor.getNome());
+                    out.println(ninjaVencedor + vencedor.getNome());
                 } else if (ninjaUm.getChakra() == 0 && ninjaDois.getChakra() == 0) {
                     vencedor = ninjaUm;
                 }
