@@ -20,7 +20,7 @@ public class Ninja {
 
     public void atacar(Ninja ninjaOponente) {
 
-        this.chakra = chakra - (jutsu.getJutsuChakra());
+        this.chakra -= (jutsu.getJutsuChakra());
 
         ninjaOponente.chakra = ninjaOponente.chakra - (jutsu.getJutsuDano());
 
@@ -36,7 +36,7 @@ public class Ninja {
 
     public void receberGolpe(Ninja ninjaOponente) {
 
-        this.chakra = chakra - (ninjaOponente.jutsu.getJutsuDano());
+        this.chakra -= (ninjaOponente.jutsu.getJutsuDano());
     }
 
 }

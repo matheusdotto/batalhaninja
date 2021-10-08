@@ -36,11 +36,14 @@ public class Batalha {
                 if (ninjaDois.getChakra() <= 0) {
                     vencedor = ninjaUm;
                     out.println(ninjaVencedor + vencedor.getNome());
+                    return vencedor;
                 } else if (ninjaUm.getChakra() <= 0) {
                     vencedor = ninjaDois;
                     out.println(ninjaVencedor + vencedor.getNome());
+                    return vencedor;
                 } else if (ninjaUm.getChakra() == 0 && ninjaDois.getChakra() == 0) {
                     vencedor = ninjaUm;
+                    return vencedor;
                 }
             }
         }
